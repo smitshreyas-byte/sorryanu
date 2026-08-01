@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>I Understand ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="heart">
+
+🤍
+
+</div>
+
+
+<h1>
+
+I Understand Anu
+
+</h1>
+
+
+
+<div class="message">
+
+
+I understand that healing takes time.
+
+
+<br><br>
+
+
+I don't want to force you.
+
+
+<br><br>
+
+
+Take all the time you need.
+
+
+<br><br>
+
+
+I will use this time to become a better person.
+
+
+<br><br>
+
+
+Your happiness matters to me ❤️
+
+
+</div>
+
+
+
+<h1>
+
+Shreyash
+
+</h1>
+
+
+<button onclick="location.href='home.html'">
+
+Start Again ❤️
+
+</button>
+
+
+</div>
+
+
+</body>
+
+</html>
