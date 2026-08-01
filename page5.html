@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Memories ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+
+background:linear-gradient(
+135deg,
+#42275a,
+#734b6d,
+#c06c84
+);
+
+}
+
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+
+
+.memory-card{
+
+background:rgba(255,255,255,.15);
+
+padding:15px;
+
+border-radius:25px;
+
+backdrop-filter:blur(15px);
+
+animation:show 1s ease;
+
+
+}
+
+
+.memory-card img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+}
+
+
+
+.memory-card p{
+
+margin-top:15px;
+
+font-size:18px;
+
+}
+
+
+
+@keyframes show{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>
+
+Our Memories
+
+</h1>
+
+
+<div class="message">
+
+Every moment with you became a memory I want to protect ❤️
+
+</div>
+
+
+
+<div class="gallery">
+
+
+<div class="memory-card">
+
+<img src="images/memory1.jpg">
+
+<p>
+
+The smiles I never want to forget ❤️
+
+</p>
+
+</div>
+
+
+
+<div class="memory-card">
+
+<img src="images/memory2.jpg">
+
+<p>
+
+The moments that made me happy 🌹
+
+</p>
+
+</div>
+
+
+
+<div class="memory-card">
+
+<img src="images/memory3.jpg">
+
+<p>
+
+Your smile is my favourite view ✨
+
+</p>
+
+</div>
+
+
+
+<div class="memory-card">
+
+<img src="images/memory4.jpg">
+
+<p>
+
+More beautiful memories waiting for us 💕
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+<button onclick="location.href='page7.html'">
+
+Our Journey ⏳
+
+</button>
+
+
+
+</div>
+
+
+
+
+<script>
+
+setInterval(()=>{
+
+let p=document.createElement("div");
+
+p.className="petal";
+
+p.innerHTML="🌹";
+
+p.style.left=Math.random()*100+"%";
+
+p.style.animationDuration=(8+Math.random()*8)+"s";
+
+document.body.appendChild(p);
+
+setTimeout(()=>p.remove(),16000);
+
+
+},1000);
+
+
+</script>
+
+
+
+</body>
+
+</html>
