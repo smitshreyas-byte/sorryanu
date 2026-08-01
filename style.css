@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>For Anu ❤️</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- Music -->
+
+<div class="music-btn">
+
+<button onclick="playMusic()">
+
+🎵 Our Song
+
+</button>
+
+</div>
+
+
+
+<audio id="music" loop>
+
+<source src="music/song.mp3" type="audio/mp3">
+
+</audio>
+
+
+
+
+
+<div class="container">
+
+
+
+<div class="heart">
+
+❤️
+
+</div>
+
+
+
+<h1>
+
+Our Little World
+
+</h1>
+
+
+
+
+<h2>
+
+Shreyash ❤️ Anu
+
+</h2>
+
+
+
+
+
+<div class="photo">
+
+
+<img src="images/couple.jpg" alt="Our Memory">
+
+
+</div>
+
+
+
+
+
+<div class="message">
+
+
+This is not just a website...
+
+<br>
+
+
+This is a small piece of my heart created for you.
+
+
+<br><br>
+
+
+I know I made a mistake.
+
+I know I hurt you.
+
+
+<br><br>
+
+
+But I want you to know...
+
+
+
+
+</div>
+
+
+
+
+
+<h2>
+
+I am truly sorry, Anu ❤️
+
+</h2>
+
+
+
+
+
+<button onclick="nextPage()">
+
+Open My Heart 💌
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+<script>
+
+
+
+// Next Page
+
+
+function nextPage(){
+
+document.body.style.opacity="0";
+
+
+setTimeout(()=>{
+
+window.location.href="page2.html";
+
+
+},600);
+
+
+}
+
+
+
+
+
+// Music
+
+
+function playMusic(){
+
+
+let music=document.getElementById("music");
+
+
+music.volume=0.5;
+
+
+music.play();
+
+
+}
+
+
+
+
+
+
+
+// Natural rose petals
+
+
+function createPetal(){
+
+
+let petal=document.createElement("div");
+
+
+petal.className="petal";
+
+
+petal.innerHTML="🌹";
+
+
+
+petal.style.left=Math.random()*100+"%";
+
+
+
+petal.style.animationDuration=
+
+(8+Math.random()*8)+"s";
+
+
+
+document.body.appendChild(petal);
+
+
+
+setTimeout(()=>{
+
+
+petal.remove();
+
+
+},16000);
+
+
+
+}
+
+
+
+
+setInterval(createPetal,900);
+
+
+
+
+
+
+// Soft sparkles
+
+
+function createSparkle(){
+
+
+let sparkle=document.createElement("div");
+
+
+sparkle.className="sparkle";
+
+
+sparkle.style.left=Math.random()*100+"%";
+
+
+sparkle.style.top=Math.random()*100+"%";
+
+
+
+document.body.appendChild(sparkle);
+
+
+
+setTimeout(()=>{
+
+
+sparkle.remove();
+
+
+},5000);
+
+
+
+}
+
+
+setInterval(createSparkle,700);
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
