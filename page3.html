@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>I Saw Your Tears 😢</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+body{
+
+background:
+
+linear-gradient(
+135deg,
+#141e30,
+#243b55,
+#485563
+);
+
+
+}
+
+
+
+/* Rain */
+
+.rain{
+
+position:fixed;
+
+top:-100px;
+
+width:2px;
+
+height:80px;
+
+background:
+
+rgba(255,255,255,.35);
+
+
+animation:rainFall linear infinite;
+
+
+pointer-events:none;
+
+}
+
+
+
+@keyframes rainFall{
+
+
+from{
+
+transform:translateY(-100px);
+
+}
+
+
+to{
+
+transform:translateY(120vh);
+
+}
+
+
+}
+
+
+
+
+
+.tear{
+
+
+font-size:90px;
+
+
+animation:
+
+tearMove 3s infinite;
+
+
+}
+
+
+
+@keyframes tearMove{
+
+
+50%{
+
+
+transform:
+
+translateY(15px);
+
+
+}
+
+
+}
+
+
+
+
+
+.memory{
+
+
+margin-top:30px;
+
+
+padding:30px;
+
+
+background:
+
+rgba(255,255,255,.08);
+
+
+border-radius:25px;
+
+
+line-height:1.9;
+
+
+}
+
+
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+
+<div class="container">
+
+
+<div class="tear">
+
+😢
+
+</div>
+
+
+
+<h1>
+
+I Saw Your Tears
+
+</h1>
+
+
+
+
+<div class="message">
+
+
+Anu...
+
+
+<br><br>
+
+
+The moment I saw you hurt,
+
+I realised my mistake was not small.
+
+
+<br><br>
+
+
+It was not just about a reel...
+
+It was about your feelings.
+
+Your trust.
+
+Your heart.
+
+
+</div>
+
+
+
+
+<div class="memory">
+
+
+You spent three days with me.
+
+You gave me your time,
+
+your happiness,
+
+and your love.
+
+
+<br><br>
+
+
+Seeing you cry because of something I did
+
+is something I never wanted.
+
+
+<br><br>
+
+
+I am sorry for making you feel that way.
+
+
+</div>
+
+
+
+
+
+
+<div class="message">
+
+
+Your tears showed me
+
+how much this relationship means to you.
+
+
+<br><br>
+
+
+And I promise...
+
+I will be more careful with your heart.
+
+
+❤️
+
+
+</div>
+
+
+
+
+
+<button onclick="nextPage()">
+
+Read My Apology ❤️
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+function nextPage(){
+
+
+window.location.href="page5.html";
+
+
+}
+
+
+
+
+// Natural rain
+
+
+for(let i=0;i<60;i++){
+
+
+let rain=document.createElement("div");
+
+
+rain.className="rain";
+
+
+rain.style.left=Math.random()*100+"%";
+
+
+rain.style.animationDuration=
+
+(1+Math.random()*2)+"s";
+
+
+rain.style.animationDelay=
+
+Math.random()*5+"s";
+
+
+document.body.appendChild(rain);
+
+
+}
+
+
+
+
+
+// Rose petals
+
+
+setInterval(()=>{
+
+
+let p=document.createElement("div");
+
+
+p.className="petal";
+
+
+p.innerHTML="🌹";
+
+
+p.style.left=Math.random()*100+"%";
+
+
+p.style.animationDuration=
+
+(8+Math.random()*8)+"s";
+
+
+document.body.appendChild(p);
+
+
+
+setTimeout(()=>{
+
+p.remove();
+
+},16000);
+
+
+
+},1000);
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
