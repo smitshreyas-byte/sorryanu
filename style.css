@@ -1,172 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-<head>
 
-<meta charset="UTF-8">
+body{
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    font-family:'Poppins',sans-serif;
 
+    overflow-x:hidden;
 
-<title>For Anu ❤️</title>
+    background:#050505;
 
+    color:white;
 
-<link rel="stylesheet" href="style.css">
+}
 
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+/* =========================
+SECTION 1 OPENING
+========================= */
 
-</head>
 
+.opening{
 
-<body>
+    min-height:100vh;
 
+    width:100%;
 
+    display:flex;
 
-<!-- Music -->
+    justify-content:center;
 
-<div class="music-btn">
+    align-items:center;
 
-<button onclick="playMusic()">
+    position:relative;
 
-🎵 Our Song
+    overflow:hidden;
 
-</button>
 
-</div>
+    background:
 
+    radial-gradient(circle at center,
+    rgba(255,80,120,.25),
+    transparent 40%),
 
+    linear-gradient(
+    135deg,
+    #050505,
+    #1a0010,
+    #2b0018
+    );
 
-<audio id="music" loop>
+}
 
-<source src="music/song.mp3" type="audio/mp3">
 
-</audio>
 
 
+.opening-content{
 
+    text-align:center;
 
+    padding:30px;
 
-<div class="container">
+    z-index:5;
 
+    animation:
 
-
-<div class="heart">
-
-❤️
-
-</div>
-
-
-
-<h1>
-
-Our Little World
-
-</h1>
-
-
-
-
-<h2>
-
-Shreyash ❤️ Anu
-
-</h2>
-
-
-
-
-
-<div class="photo">
-
-
-<img src="images/couple.jpg" alt="Our Memory">
-
-
-</div>
-
-
-
-
-
-<div class="message">
-
-
-This is not just a website...
-
-<br>
-
-
-This is a small piece of my heart created for you.
-
-
-<br><br>
-
-
-I know I made a mistake.
-
-I know I hurt you.
-
-
-<br><br>
-
-
-But I want you to know...
-
-
-
-
-</div>
-
-
-
-
-
-<h2>
-
-I am truly sorry, Anu ❤️
-
-</h2>
-
-
-
-
-
-<button onclick="nextPage()">
-
-Open My Heart 💌
-
-</button>
-
-
-
-</div>
-
-
-
-
-
-
-<script>
-
-
-
-// Next Page
-
-
-function nextPage(){
-
-document.body.style.opacity="0";
-
-
-setTimeout(()=>{
-
-window.location.href="page2.html";
-
-
-},600);
+    fadeUp 2s ease;
 
 
 }
@@ -175,19 +78,203 @@ window.location.href="page2.html";
 
 
 
-// Music
+.small-text{
+
+    font-size:16px;
+
+    opacity:.8;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
 
 
-function playMusic(){
+}
 
 
-let music=document.getElementById("music");
 
 
-music.volume=0.5;
+h1{
+
+    font-size:clamp(28px,5vw,45px);
+
+    font-weight:300;
+
+}
 
 
-music.play();
+
+
+h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:
+
+    clamp(70px,12vw,120px);
+
+
+    color:#ff7aa2;
+
+    margin:10px 0;
+
+
+    text-shadow:
+
+    0 0 20px rgba(255,120,160,.7);
+
+
+}
+
+
+
+
+
+.names{
+
+    margin-top:35px;
+
+    font-size:
+
+    clamp(28px,6vw,50px);
+
+
+    font-weight:500;
+
+
+}
+
+
+
+.names span{
+
+    display:inline-block;
+
+    margin:0 15px;
+
+    animation:heartBeat 1.5s infinite;
+
+}
+
+
+
+
+.intro{
+
+    margin:35px auto;
+
+    max-width:500px;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+    opacity:.85;
+
+}
+
+
+
+
+
+button{
+
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+
+    background:
+
+    linear-gradient(
+    45deg,
+    #ff4d88,
+    #ff8fab
+    );
+
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+    0 0 30px rgba(255,100,150,.5);
+
+
+    transition:.4s;
+
+
+}
+
+
+
+button:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+
+
+/* HEARTBEAT */
+
+
+.heartbeat{
+
+
+    font-size:90px;
+
+
+    animation:
+
+    heartBeat 1.5s infinite;
+
+
+    filter:
+
+    drop-shadow(
+    0 0 20px pink
+    );
+
+
+}
+
+
+
+
+
+@keyframes heartBeat{
+
+
+0%{
+
+transform:scale(1);
+
+}
+
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+
+100%{
+
+transform:scale(1);
+
+}
 
 
 }
@@ -198,44 +285,28 @@ music.play();
 
 
 
-// Natural rose petals
+/* FADE */
 
 
-function createPetal(){
+@keyframes fadeUp{
 
 
-let petal=document.createElement("div");
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
 
 
-petal.className="petal";
+to{
 
+opacity:1;
 
-petal.innerHTML="🌹";
+transform:translateY(0);
 
-
-
-petal.style.left=Math.random()*100+"%";
-
-
-
-petal.style.animationDuration=
-
-(8+Math.random()*8)+"s";
-
-
-
-document.body.appendChild(petal);
-
-
-
-setTimeout(()=>{
-
-
-petal.remove();
-
-
-},16000);
-
+}
 
 
 }
@@ -243,57 +314,119 @@ petal.remove();
 
 
 
-setInterval(createPetal,900);
 
 
+/* FLOATING STARS */
 
 
+.stars::before,
+.stars::after{
 
 
-// Soft sparkles
+content:"✨";
 
 
-function createSparkle(){
+position:absolute;
 
 
-let sparkle=document.createElement("div");
+font-size:25px;
 
 
-sparkle.className="sparkle";
+animation:
 
-
-sparkle.style.left=Math.random()*100+"%";
-
-
-sparkle.style.top=Math.random()*100+"%";
-
-
-
-document.body.appendChild(sparkle);
-
-
-
-setTimeout(()=>{
-
-
-sparkle.remove();
-
-
-},5000);
-
+floatStars 8s infinite;
 
 
 }
 
 
-setInterval(createSparkle,700);
+
+.stars::before{
+
+left:15%;
+
+top:20%;
+
+}
+
+
+.stars::after{
+
+right:20%;
+
+bottom:20%;
+
+animation-delay:3s;
+
+}
 
 
 
-</script>
+
+@keyframes floatStars{
+
+
+0%{
+
+transform:translateY(0);
+
+opacity:.3;
+
+}
+
+
+50%{
+
+transform:translateY(-40px);
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:translateY(0);
+
+opacity:.3;
+
+}
+
+
+}
 
 
 
-</body>
 
-</html>
+
+
+
+/* MOBILE */
+
+
+@media(max-width:600px){
+
+
+.opening-content{
+
+padding:20px;
+
+}
+
+
+.intro{
+
+font-size:15px;
+
+}
+
+
+
+.heartbeat{
+
+font-size:70px;
+
+}
+
+
+}
